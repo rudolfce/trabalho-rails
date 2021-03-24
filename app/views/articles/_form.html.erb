@@ -1,0 +1,39 @@
+<%= form_with model: article do |form| %>
+  <div class="form-section">
+    <%= form.label :title, "Título" %>
+    <%= form.text_field :title %>
+    <% article.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="edit-content-div form-section">
+    <%= form.label :body, "Conteúdo" %>
+    <%= form.text_area :body,
+      { :class => 'content-input' } %>
+    <% article.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="form-section">
+    <span>Autor:</span>
+    <%= collection_select(
+        :article,
+        :author_id,
+        Author.all,
+        :id,
+        :name,
+        { include_blank: 'Selecione um autor'}
+    ) %>
+  </div>
+
+  <div class="form-section">
+    <span>Tags:</span><br>
+    <%= form.text_field :tag_list %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,41 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.article-list {
+    max-width: 80em;
+    margin: 0 auto 1em auto;
+}
+
+.article-list ul {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-block {
+    background-color: #CBBFBB;
+    width: 20em;
+    height: 15em;
+    padding: 2em;
+    margin: 1em 0;
+    border-radius: 15px;
+}
+
+.article-title {
+    font-family: Montserrat-bold;
+    font-size: large;
+    margin: 0 0 1em 0;
+}
+
+.article-demo {
+    padding: 0.5em;
+}
+
+.new-article-button {
+    font-family: Montserrat-bold;
+    background-color: #0A3200;
+    padding: 1em 3em;
+    border-radius: 7px;
+    color: white;
+}

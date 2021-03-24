@@ -1,0 +1,12 @@
+<div class="article-list">
+    <ul>
+        <% @articles.each do |article| %>
+            <li>
+                <div class="article-block">
+                    <div class="article-title"><%= link_to article.title, article %></div>
+                    <div class="article-demo"><%= article.body.truncate(200) %></div>
+                </div>
+            </li>
+        <% end %>
+    </ul>
+</div>

@@ -1,0 +1,102 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+     font-family: Montserrat;
+ }
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+header {
+    padding: 1em 0;
+    background-color: #35679b;
+    color: #c9d7eb;
+}
+
+.logo {
+    font-family: Montserrat-Bold;
+}
+
+.navbar-link {
+    padding: 1em;
+    color: #c9d7eb;
+}
+
+a.navbar-link:hover {
+    background-color: 070707;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('Montserrat-Regular.ttf')
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url('Montserrat-Bold.ttf')
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+select {
+    appearance: none;
+    background-color: transparent;
+    padding: 0;
+    border-style: solid;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    
+}
+
+.form-section {
+    margin: 0 0 1em 0;
+}
+
+.content-input {
+    height: 10em;
+    width: 100%;
+    resize: none;
+}

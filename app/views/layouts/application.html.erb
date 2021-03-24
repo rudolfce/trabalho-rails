@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+    <div class="container">
+      <span class="logo">
+        Blog
+      </span>
+      <nav>
+        <ul>
+          <li><%= link_to "Home",
+            {:controller => 'articles', :action => 'index'},
+            {:class => 'navbar-link'}
+          %></li>
+          <li><%= link_to "Autores",
+            {:controller => 'authors', :action => 'index'},
+            {:class => 'navbar-link'}
+          %></li>
+        </ul>
+      </nav>
+    </div>
+    </header>
+    <div class="container">
+    <%= yield %>
+    </div>
+  </body>
+</html>

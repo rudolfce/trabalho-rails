@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @author.name %>
+</p>
+
+<p>
+  <strong>Biografia:</strong>
+  <%= @author.bio %>
+</p>
+
+<%= link_to "Artigos deste autor", :controller => :articles, :action => :by_author, :author => @author.id %>
+<br>
+<%= link_to 'Editar autor', edit_author_path(@author) %> |
+<%= link_to 'Voltar à lista de autores', authors_path %>

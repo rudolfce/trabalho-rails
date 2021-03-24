@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Autores</h1>
+
+    <ul>
+    <% @authors.each do |author| %>
+    <li>
+      <div class="author-block">
+        <div class="author-data">
+          <div class="author-name"><%= link_to author.name, author %></div>
+          <div class="author-bio"><%= author.bio %></div>
+        </div>
+        <div class="delete-author"><span><%= link_to 'Remover', author, method: :delete, data: { confirm: 'Tem certeza de que deseja remover este autor?' } %></span></div>
+      </div>
+    </li>
+    <% end %>
+    </ul>
+
+<br>
+
+<%= link_to 'Novo autor', new_author_path,
+  {:class => 'new-author-button'} %>

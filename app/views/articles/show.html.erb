@@ -1,0 +1,17 @@
+<h1><%= @article.title %></h1>
+<% if @author %>
+    <span>Escrito por: <b><%= link_to @author.name, @author %></b></span>
+<% else %>
+    <span>Texto anônimo</span>
+<% end %>
+
+<p><%= @article.body %></p>
+
+<div>
+    Tags:
+    <% @tags.each do |tag| %>
+        <%= link_to tag.name, tag %><%= ', ' if (tag != @tags.last) %>
+    <% end %>
+</div>
+
+<%= link_to "Editar artigo", edit_article_path(@article) %>
